@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const cardModel = require('./models/card.js');
-const cards = require('./dummyData/cards.js');
+const cards = require('./data/dummyCards.js');
 
 async function main() {
     const databasePath = 'mongodb+srv://connor:gnPY8DDKcPxgIRWn@cluster0.fabc3.mongodb.net/cards';
@@ -14,6 +14,7 @@ async function main() {
         cards.forEach(async (cardJson) => {
             const card = new cardModel(cardJson);
             await card.save();
+            console.log(card.name, 'saved');
         });
     });
 }

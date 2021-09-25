@@ -1,4 +1,5 @@
 const static_orb = {
+    foo: "bar",
     name: "Static Orb",
     mana_cost: "{3}",
     cmc: 3,
