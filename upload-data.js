@@ -1,6 +1,7 @@
 const oracle_cards = require('../oracle-cards-20210925090339.json');
 const mongoose = require('mongoose');
 const cardModel = require('./models/card.js');
+require('dotenv').config();
 
 async function main() {
     const databasePath = 'mongodb+srv://connor:gnPY8DDKcPxgIRWn@cluster0.fabc3.mongodb.net/cards';
@@ -19,4 +20,6 @@ async function main() {
     });
 }
 
-main();
+// main();
+
+console.log(process.env.DATABASE_USER);
