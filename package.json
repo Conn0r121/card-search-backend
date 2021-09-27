@@ -1,4 +1,4 @@
-{ 
+{
   "name": "card-search-backend",
   "version": "1.0.0",
   "description": "initial backend for card searching tool",
@@ -9,6 +9,7 @@
   "author": "Connor Robinson",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "mongoose": "^6.0.7"
   }
 }
