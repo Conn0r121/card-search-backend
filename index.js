@@ -1,22 +1,5 @@
-const mongoose = require('mongoose');
-const cardModel = require('./models/card.js');
-const cards = require('./data/dummyCards.js');
-
 async function main() {
-    const databasePath = 'mongodb+srv://connor:gnPY8DDKcPxgIRWn@cluster0.fabc3.mongodb.net/cards';
-    mongoose.connect(databasePath, {useNewUrlParser: true, useUnifiedTopology: true});
-    const db = mongoose.connection;
-    
-    db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-    db.once('open', async () => {
-        console.log('connected');
-    
-        cards.forEach(async (cardJson) => {
-            const card = new cardModel(cardJson);
-            await card.save();
-            console.log(card.name, 'saved');
-        });
-    });
+    console.log('index doesnt do anything yet!');
 }
 
 main();

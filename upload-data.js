@@ -4,7 +4,7 @@ const cardModel = require('./models/card.js');
 require('dotenv').config();
 
 async function main() {
-    const databasePath = 'mongodb+srv://connor:gnPY8DDKcPxgIRWn@cluster0.fabc3.mongodb.net/cards';
+    const databasePath = `${process.env.DATABASE_URI}/cards`;
     mongoose.connect(databasePath, {useNewUrlParser: true, useUnifiedTopology: true});
     const db = mongoose.connection;
     
@@ -20,6 +20,4 @@ async function main() {
     });
 }
 
-// main();
-
-console.log(process.env.DATABASE_USER);
+main();
