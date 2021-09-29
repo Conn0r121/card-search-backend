@@ -1,4 +1,4 @@
-const oracle_cards = require('../oracle-cards-20210925090339.json');
+const oracle_cards = require('../oracle-cards.json');
 const mongoose = require('mongoose');
 const cardModel = require('./models/card.js');
 require('dotenv').config();
