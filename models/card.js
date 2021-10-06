@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const cardSchema = new mongoose.Schema({
     name: String,
@@ -9,4 +9,6 @@ const cardSchema = new mongoose.Schema({
     colors: [String]
 });
 
-module.exports = mongoose.model('Card', cardSchema);
+const cardModel = mongoose.model('Card', cardSchema);
+
+export {cardModel}
