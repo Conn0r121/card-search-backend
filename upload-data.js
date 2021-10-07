@@ -33,8 +33,14 @@ async function main() {
         console.log('connected');
     
         oracleCards.forEach(async (cardJson) => {
-            const card = new cardModel(cardJson);
-            await card.save();
+            const query = {name: cardJson.name};
+            const params = {
+                upsert: true,
+                new: true
+            }
+
+            const doc = await cardModel.findOneAndUpdate(query, cardJson, params);
+            console.log(doc.name, ' added');
         });
     });
 }

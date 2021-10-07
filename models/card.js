@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
 
 const cardSchema = new mongoose.Schema({
-    name: String,
-    mana_cost: String,
-    cmc: Number,
-    type_line: String,
-    oracle_text: String,
-    colors: [String]
+    name: {type: String, unique: true},
+    mana_cost: {type: String},
+    cmc: {type: Number},
+    type_line: {type: String},
+    oracle_text: {type: String},
+    colors: {type: [String]}
 });
 
 const cardModel = mongoose.model('Card', cardSchema);
