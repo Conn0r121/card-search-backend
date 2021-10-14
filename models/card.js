@@ -11,4 +11,4 @@ const cardSchema = new mongoose.Schema({
 
 const cardModel = mongoose.model('Card', cardSchema);
 
-export {cardModel}
+export default cardModel;

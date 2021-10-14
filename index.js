@@ -1,8 +1,11 @@
-const mongoose = require('mongoose');
-const cardModel = require('./models/card.js');
-require('dotenv').config();
+import mongoose from 'mongoose';
+import cardModel from './models/card.js';
+import dotenv from 'dotenv';
+import express from 'express';
 
-const app = require('express')();
+dotenv.config();
+
+const app = express();
 const PORT = 8080;
 
 const databasePath = `${process.env.DATABASE_URI}/cards`;

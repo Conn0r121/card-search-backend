@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import {cardModel} from './models/card.js';
+import cardModel from './models/card.js';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
