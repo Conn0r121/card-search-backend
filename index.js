@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const cardModel = require('./models/card.js');
-const dotenv = require('dotenv');
-const fetch = require('cross-fetch');
+// const mongoose = require('mongoose');
+// const cardModel = require('./models/card.js');
+// const dotenv = require('dotenv');
+// const fetch = require('cross-fetch');
 
 // dotenv.config();
 
