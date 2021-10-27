@@ -1,4 +1,4 @@
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const cardModel = require('./models/card.js');
 // const dotenv = require('dotenv');
 // const fetch = require('cross-fetch');
@@ -25,10 +25,17 @@ const cardModel = require('./models/card.js');
 
 
 exports.handler = async (event) => {
+    const databasePath = `${process.env.DATABASE_URI}/cards`;
+    mongoose.connect(databasePath, {useNewUrlParser: true, useUnifiedTopology: true});
+    const db = mongoose.connection;
+
+    const cardName = 'Opt';
+    const card = await cardModel.find({ name: cardName});
+    
+
     const response = {
         statusCode: 200,
-        body: JSON.stringify('Hello from Lambda!'),
+        body: JSON.stringify(card),
     };
     return response;
 }
-// adding temp comments to test push
