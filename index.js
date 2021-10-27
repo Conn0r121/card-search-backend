@@ -27,9 +27,8 @@ const cardModel = require('./models/card.js');
 exports.handler = async (event) => {
     const databasePath = `${process.env.DATABASE_URI}/cards`;
     mongoose.connect(databasePath, {useNewUrlParser: true, useUnifiedTopology: true});
-    const db = mongoose.connection;
 
-    const cardName = 'Opt';
+    const cardName = event.queryStringParameters.name;
     const card = await cardModel.find({ name: cardName});
     
 
