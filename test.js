@@ -1,2 +1,1 @@
-import index from 'index.js'
-
+// test stuff goes here

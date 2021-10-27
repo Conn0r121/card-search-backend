@@ -1,7 +1,7 @@
-import mongoose from 'mongoose';
-import cardModel from './models/card.js';
-import dotenv from 'dotenv';
-import express from 'express';
+const mongoose = require('mongoose');
+const cardModel = require('./models/card.js');
+const dotenv = require('dotenv');
+const fetch = require('cross-fetch');
 
 dotenv.config();
 
