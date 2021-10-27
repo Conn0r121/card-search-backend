@@ -3,10 +3,10 @@ const cardModel = require('./models/card.js');
 const dotenv = require('dotenv');
 const fetch = require('cross-fetch');
 
-dotenv.config();
+// dotenv.config();
 
 // const app = express();
-const PORT = 8080;
+// const PORT = 8080;
 
 // const databasePath = `${process.env.DATABASE_URI}/cards`;
 // mongoose.connect(databasePath, {useNewUrlParser: true, useUnifiedTopology: true});
