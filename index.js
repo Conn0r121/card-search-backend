@@ -6,7 +6,8 @@ exports.handler = async (event) => {
     mongoose.connect(databasePath, {useNewUrlParser: true, useUnifiedTopology: true});
 
     const cardName = event.queryStringParameters.name;
-    const card = await cardModel.find({ name: cardName});
+    const regex = new RegExp(cardName, 'i');
+    const card = await cardModel.find({'name' : { '$regex': regex}});
     
 
     const response = {
