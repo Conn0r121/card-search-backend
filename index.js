@@ -7,7 +7,7 @@ exports.handler = async (event) => {
 
     const cardName = event.queryStringParameters.name;
     const regex = new RegExp(cardName, 'i');
-    const card = await cardModel.find({'name' : { '$regex': regex}});
+    const cards = await cardModel.find({'name' : { '$regex': regex}});
     
 
     const response = {
@@ -17,7 +17,7 @@ exports.handler = async (event) => {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET"
         },
-        body: JSON.stringify(card),
+        body: JSON.stringify(cards),
     };
     return response;
 }
